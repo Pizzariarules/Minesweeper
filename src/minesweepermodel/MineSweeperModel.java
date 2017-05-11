@@ -13,9 +13,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -37,7 +39,6 @@ public class MineSweeperModel extends Application {
 //
 //        button.setStyle("-fx-background-color: #090a0c ");
 //        button.setMinWidth(200);
-        
         ToggleButton TB = new ToggleButton("pizza");
 
         TB.setMaxWidth(100);
@@ -61,14 +62,16 @@ public class MineSweeperModel extends Application {
         for (int i = 0; i <= 10; i++) {
             for (int x = 0; x <= 10; x++) {
                 Button button = new Button();
-                button.setMinWidth(30);
+                button.setMinWidth(50);
+                button.setMinHeight(50);
+                button.setPadding(new Insets(0));
                 grid.add(button, i, x);
                 list.add(button);
             }
         }
         StackPane root = new StackPane();
 
-        Scene scene = new Scene(root, 600, 600);
+        Scene scene = new Scene(root, 900, 900);
         root.getChildren().add(grid);
         primaryStage.setTitle("MineSweeper");
         primaryStage.setScene(scene);
@@ -79,8 +82,8 @@ public class MineSweeperModel extends Application {
             get.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    Image image = new Image("http://icons.iconarchive.com/icons/aha-soft/desktop-buffet/128/Pizza-icon.png");
-                    
+                    Image image = new Image("https://lh3.googleusercontent.com/GHy-8ShK7QTj53LJCpog-1vTM9Wjt3sANyAI08MygIJRCoPkCgQmy3_n-TljALJPxd85Guc=s85", 50, 50, true, true);
+
                     ImageView imageView = new ImageView(image);
                     get.setGraphic(imageView);
 
