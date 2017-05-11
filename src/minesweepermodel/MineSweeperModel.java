@@ -34,11 +34,7 @@ public class MineSweeperModel extends Application {
     @Override
     public void start(Stage primaryStage) throws FileNotFoundException {
 
-//        Button button = new Button();
-//        button.setText("I do nothing.");
-//
-//        button.setStyle("-fx-background-color: #090a0c ");
-//        button.setMinWidth(200);
+
         ToggleButton TB = new ToggleButton("pizza");
 
         TB.setMaxWidth(100);
@@ -47,13 +43,7 @@ public class MineSweeperModel extends Application {
 
         int count = 0;
 
-//        for(int i = 0; i<9; i++){
-//        ToggleButton another = new ToggleButton("pizza", imageView);
-//        count++;
-//        another.setMaxSize(100, 100);
-//        list.add(another);
-//        
-//        }
+
         VBox hbox = new VBox();
 
         hbox.getChildren().addAll(TB);
@@ -69,8 +59,11 @@ public class MineSweeperModel extends Application {
                 list.add(button);
             }
         }
+        
+        
         StackPane root = new StackPane();
-
+        
+        
         Scene scene = new Scene(root, 900, 900);
         root.getChildren().add(grid);
         primaryStage.setTitle("MineSweeper");
