@@ -33,20 +33,7 @@ public class MineSweeperModel extends Application {
     //Matrix? lots of boxes?
     @Override
     public void start(Stage primaryStage) throws FileNotFoundException {
-
-
-        ToggleButton TB = new ToggleButton("pizza");
-
-        TB.setMaxWidth(100);
-
         List<Button> list = new ArrayList<>();
-
-        int count = 0;
-
-
-        VBox hbox = new VBox();
-
-        hbox.getChildren().addAll(TB);
 
         GridPane grid = new GridPane();
         for (int i = 0; i <= 10; i++) {
